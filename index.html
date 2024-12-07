@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catoshi - Играющая и милая мем-койн, построенная на блокчейне Solana, с быстрыми транзакциями и сильным сообществом!">
+    <meta property="og:title" content="Catoshi - Мем-койн на Solana">
+    <meta property="og:description" content="Catoshi - Играющий мем-койн на блокчейне Solana с быстрыми транзакциями и сильным сообществом.">
+    <meta property="og:image" content="https://link-to-your-image.com/image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Catoshi - Мем-койн на Solana">
+    <meta name="twitter:description" content="Присоединяйтесь к нашему сообществу и получайте удовольствие от криптовалюты!">
+    <meta name="twitter:image" content="https://link-to-your-image.com/image.jpg">
+    <title>Catoshi - Мем-койн</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            cursor: url('https://img.craiyon.com/2024-12-07/RhtIT5DLSDu9IhV3Y_MpZQ.webp'), auto;
+        }
+
+        header {
+            background-color: #2f8f3d;
+            color: white;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .logo img {
+            width: 150px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            margin-left: 50px;
+        }
+
+        .nav-links li {
+            padding: 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffcc00;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .cta-button {
+            background-color: #ffcc00;
+            border: none;
+            padding: 15px 30px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ffb300;
+            transform: scale(1.05);
+        }
+
+        .hero-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 500px;
+            background: url('https://img.craiyon.com/2024-12-07/RhtIT5DLSDu9IhV3Y_MpZQ.webp') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-left: 50px;
+        }
+
+        .hero-image {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .parallax-section {
+            background-color: #2f8f3d;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .parallax-section .section-title {
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .parallax-section .section-content {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        footer {
+            background-color: #2f8f3d;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer .footer-logo img {
+            width: 120px;
+        }
+
+        footer .footer-links {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer .footer-links li {
+            margin: 0 15px;
+        }
+
+        footer .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-links a:hover {
+            color: #ffcc00;
+        }
+
+        /* Адаптивность для экрана до 768px */
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+            }
+
+            .hero-content {
+                padding-left: 0;
+                text-align: center;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                margin-left: 0;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-button {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+
+            footer .footer-links {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav role="navigation">
+            <div class="logo" aria-label="Catoshi Logo">
+                <img src="https://img.craiyon.com/2024-12-07/RhtIT5DLSDu9IhV3Y_MpZQ.webp" alt="Catoshi Logo">
+            </div>
+            <ul class="nav-links" aria-label="Main navigation">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="cta-buttons">
+                <button class="cta-button" aria-label="Buy Catoshi" onclick="window.location.href='https://link-to-your-wallet'">Buy Catoshi</button>
+                <button class="cta-button" aria-label="Connect Wallet" onclick="connectPhantom()">Connect Wallet</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to Catoshi</h1>
+            <p>Your playful crypto companion, built on the Solana blockchain</p>
+        </div>
+        <div class="hero-image">
+            <img src="https://img.craiyon.com/2024-12-07/RhtIT5DLSDu9IhV3Y_MpZQ.webp" alt="Catoshi Cat" class="cat-image">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="parallax-section">
+        <h2 class="section-title">About Catoshi</h2>
+        <p class="section-content">Catoshi is a meme coin designed for fun, utility, and growth. Built on Solana's fast blockchain, it offers high-speed transactions and low fees. Join our vibrant community and help us push the boundaries of crypto!</p>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social-media" class="social-media">
+        <h2>Follow Catoshi on Twitter</h2>
+        <a class="twitter-timeline" data-width="500" data-height="600" href="https://twitter.com/catoshi?ref_src=twsrc%5Etfw">Tweets by Catoshi</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="catoshi-logo.png" alt="Catoshi Logo">
+            </div>
+            <ul class="footer-links">
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        // Phantom Wallet Connection
+        async function connectPhantom() {
+            if (window.solana && window.solana.isPhantom) {
+                try {
+                    const response = await window.solana.connect();
+                    console.log(response.publicKey.toString());
+                } catch (error) {
+                    alert('Произошла ошибка при подключении. Попробуйте снова.');
+                }
+            } else {
+                alert('Пожалуйста, установите кошелек Phantom.');
+            }
+        }
+
+        // Parallax Scrolling Effect
+        document.addEventListener("scroll", function () {
+            const parallax = document.querySelector('.parallax-section');
+            const scrollPosition = window.pageYOffset;
+            parallax.style.backgroundPosition = 'center ' + (scrollPosition * 0.5) + 'px';
+        });
+
+        // Hover Effect on Buttons
+        const buttons = document.querySelectorAll('.cta-button');
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', () => {
+                button.style.transform = "scale(1.1)";
+            });
+            button.addEventListener('mouseout', () => {
+                button.style.transform = "scale(1)";
+            });
+        });
+    </script>
+
+</body>
+
+</html>
